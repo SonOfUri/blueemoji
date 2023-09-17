@@ -37834,42 +37834,42 @@ Webflow.define('brand', module.exports = function ($) {
     $(brandElement).attr('style', fullScreen ? 'display: none !important;' : '');
   }
 
-  function createBadge() {
-    var $brand = $('<a class="w-webflow-badge"></a>').attr('href', 'https://webflow.com?utm_campaign=brandjs');
-    var $logoArt = $('<img>').attr('src', 'https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-icon.f67cd735e3.svg').attr('alt', '').css({
-      marginRight: '8px',
-      width: '16px'
-    });
-    var $logoText = $('<img>').attr('src', 'https://d1otoma47x30pg.cloudfront.net/img/webflow-badge-text.6faa6a38cd.svg').attr('alt', 'Made in Webflow');
-    $brand.append($logoArt, $logoText);
-    return $brand[0];
-  }
+  // function createBadge() {
+  //   var $brand = $('<a class="w-webflow-badge"></a>').attr('href', 'https://webflow.com?utm_campaign=brandjs');
+  //   var $logoArt = $('<img>').attr('src', 'https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-icon.f67cd735e3.svg').attr('alt', '').css({
+  //     marginRight: '8px',
+  //     width: '16px'
+  //   });
+  //   var $logoText = $('<img>').attr('src', 'https://d1otoma47x30pg.cloudfront.net/img/webflow-badge-text.6faa6a38cd.svg').attr('alt', 'Made in Webflow');
+  //   $brand.append($logoArt, $logoText);
+  //   return $brand[0];
+  // }
 
-  function ensureBrand() {
-    var found = $body.children(namespace);
-    var match = found.length && found.get(0) === brandElement;
-    var inEditor = Webflow.env('editor');
+  // function ensureBrand() {
+  //   var found = $body.children(namespace);
+  //   var match = found.length && found.get(0) === brandElement;
+  //   var inEditor = Webflow.env('editor');
 
-    if (match) {
-      // Remove brand when Editor is active
-      if (inEditor) {
-        found.remove();
-      } // Exit early, brand is in place
-
-
-      return;
-    } // Remove any invalid brand elements
+  //   if (match) {
+  //     // Remove brand when Editor is active
+  //     if (inEditor) {
+  //       found.remove();
+  //     } // Exit early, brand is in place
 
 
-    if (found.length) {
-      found.remove();
-    } // Append the brand (unless Editor is active)
+  //     return;
+  //   } // Remove any invalid brand elements
 
 
-    if (!inEditor) {
-      $body.append(brandElement);
-    }
-  } // Export module
+  //   if (found.length) {
+  //     found.remove();
+  //   } // Append the brand (unless Editor is active)
+
+
+  //   if (!inEditor) {
+  //     $body.append(brandElement);
+  //   }
+  // } // Export module
 
 
   return api;
