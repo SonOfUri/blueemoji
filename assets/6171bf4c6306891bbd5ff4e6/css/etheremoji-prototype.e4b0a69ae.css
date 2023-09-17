@@ -2868,9 +2868,6 @@ figcaption {
   align-items: center;
 }
 
-.company-logo {
-  width: 220px;
-}
 
 .navbar {
   position: fixed;
@@ -6383,9 +6380,6 @@ html.w-mod-js *[data-ix="du"] {
     padding-left: 15px;
   }
 
-  .company-logo {
-    width: 200px;
-  }
 
   .total-item-label {
     font-size: 16px;
